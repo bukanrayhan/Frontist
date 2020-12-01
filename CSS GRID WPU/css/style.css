@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: #ddd;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    padding: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+.header {
+    display: grid;
+    grid-template-areas: 
+    'hero hero feature-1'
+    'hero hero feature-2';
+
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 350px;
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: #fff;
+}
+
+.hero h2, .hero p {
+    display: none;
+}
+
+.f {
+    background-color: #000000;
+    color: white;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.feature-1 {
+    grid-area: feature-1;
+    background-image: url(../img/hoodie.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.feature-2 {
+    grid-area: feature-2;
+    background-image: url(../img/t-shirt.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.f .price {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.menu {
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.menu .brand {
+    font-size: 1.3em;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.menu ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;    
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        order: inherit;
+        grid-template-columns: 1fr;
+    }
+
+    .menu .brand {
+        display: none;
+    }
+
+    .hero h2, .hero p{
+        display: block;
+        color: black;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 500px) {
+
+}
